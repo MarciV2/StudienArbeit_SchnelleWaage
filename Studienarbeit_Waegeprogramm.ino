@@ -93,7 +93,6 @@ if(digitalRead(switchPin)){
   if(myFile){
       unsigned long wert=hx711.read();
       //Kalibrierten Wert ausrechnen (nicht exakt!!)
-      // unsigned long wertCal=(wert-8297724)/1800;
       unsigned long wertCal=(wert-8381379)/1767;
       if(wertCal>2000000) wertCal=0;
       myFile.print(millis()-millisecs);
